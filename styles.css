@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+:root{
+    --font-style:'Hanken Grotesk', sans-serif;
+    --reaction-color:hsl(0, 100%, 67%);
+    --memory-color:hsl(39, 100%, 56%);
+    --verbal-color:hsl(166, 100%, 37%);
+    --visual-color:hsl(234, 85%, 45%);
+    --result-score-background-color:linear-gradient(
+        to bottom,
+        hsla(256, 72%, 46%, 0.9), 
+        hsla(256, 50%, 30%, 0.01) );
+    --card-background-color:linear-gradient(
+        to top,
+        hsl(241, 81%, 54%) 20%,
+        hsl(241, 81%, 70%));
+    --paragraph-color:hsla(0, 0%, 100%, 0.6);
+    --main-body-background-color:hsla(221, 100%, 96%,0.9);
+    --summary-color-overall-score-100:hsl(241, 100%, 89%);
+    --button-results-color:linear-gradient(
+        to bottom, 
+        hsla(224, 30%, 27%,0.9), 
+        hsla(256, 50%, 20%, 0.9));
+    --reaction-background-color:hsla(0, 100%, 67%, 0.05);
+    --memory-background-color:hsla(39, 100%, 56%,0.05);
+    --verbal-background-color:hsla(166, 100%, 37%,0.05);
+    --visual-background-color:hsla(234, 85%, 45%,0.05);
+}
+
+body{
+    font-size: 112.5%;
+    background-color: white;
+}
+
+*, *::before, *::after{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+*{
+    font:inherit;
+}
+
+.card-component-result-summary{
+    display: grid;
+    width: 37rem;
+    margin:3rem auto;
+    height:27rem;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap:0rem;
+    background-color: white;
+    border-radius: 2rem;
+    box-shadow: 0px 20px 20px hsla(256, 50%, 30%, 0.1);
+}
+
+.card-component-result{
+    background: var(--card-background-color);
+    border-radius: 1.5rem;
+}
+
+@font-face {
+    font-family: "Hanken Grotesk";
+    src: url(assets/fonts/HankenGrotesk-VariableFont_wght.ttf) format(truetype);
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+h1{
+    text-align: center;
+    font-family:var(--font-style);
+    font-size: 1.15rem;
+    color: var(--paragraph-color);
+    font-variation-settings: 
+    'wght' 500;
+    margin-top: 1.7rem;
+    
+}
+
+.card-component-results-score{
+    width: 60%;
+    height: 41%;
+    background: var(--result-score-background-color);
+    margin: 1.5rem auto;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+    border-radius: 50%;
+}
+
+.actual-score{
+    font-family:var(--font-style);
+    font-size: 4rem;
+    color: whitesmoke;
+    font-variation-settings: 
+    'wght' 700;
+}
+
+.overall-score{
+    font-family:var(--font-style);
+    font-size: 0.9rem;
+    color: var(--paragraph-color);
+
+}
+
+.overall-feeling-about-the-score{
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: var(--font-style);
+    color: whitesmoke;
+    font-variation-settings:
+    'wght' 600;
+}
+
+.card-component-comparing-results{
+    text-align: center;
+    width: 70%;
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right:auto;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    font-family: var(--font-style);
+    vertical-align: middle;
+    color: var(--paragraph-color);
+}
+
+
+
+h2{
+    color: hsla(256, 50%, 20%, 0.9);
+    font-family:var(--font-style);
+    font-variation-settings: 
+    'wght' 700;
+    margin-top: 1.7rem;
+    font-size: 1.15rem;
+    margin-left: 2rem ;
+}
+
+.card-component-summary-results-test{
+    display: flex;
+    flex-direction: column;
+    row-gap:1rem;
+}
+
+.results-test{
+    --width-for-results:78%;
+    width: 78%;
+    height: 65%;
+    margin: 0rem auto;
+    display: inline-flex;
+    text-align: center;
+    place-items: center;
+    justify-content: space-between;
+    font-family: var(--font-style);
+    font-size: 0.9rem;
+    padding: 0.95rem;
+    font-variation-settings:
+    'wght' 700;
+    
+}
+.reaction-row{
+    margin-top: 1.5rem;
+    background-color: var(--reaction-background-color);
+    border-radius: 0.5rem;
+    /* border-width: 0.1rem;
+    border-top-style: solid;
+    border-top-color: grey; */
+}
+
+.left-handside{
+    display: flex;
+    text-align: left;
+    place-items: left;
+    justify-content: space-between;
+
+}
+
+.results-img{
+    margin-right: 0.45rem;
+    transform: scale(0.8);
+}
+.reaction-text{
+    /* font-size: 0.85rem; */
+    color: var(--reaction-color);
+}
+.right-handside{
+    display: flex;
+    justify-content:space-evenly;
+}
+.actual-score-reaction-test{
+    color: hsla(256, 50%, 20%, 0.9);
+}
+
+.overall-score-reaction-test{
+    color: var(--summary-color-overall-score-100);
+}
+
+.memory-row{
+    background-color: var(--memory-background-color);
+    /* margin-top: 1rem; */
+    border-radius:0.5rem;
+}
+
+.memory-text{
+    color: var(--memory-color);
+}
+
+.verbal-row{
+    background-color: var(--verbal-background-color);
+    border-radius: 0.5rem;
+}
+.verbal-text{
+    color: var(--verbal-color);
+}
+
+.visual-row{
+    background-color: var(--visual-background-color);
+    border-radius: 0.5rem;
+}
+
+.visual-text{
+    color: var(--visual-color);
+}
+
+.continue-button{
+    width: 78%;
+    padding: 0.9rem;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 1.8rem;
+    display: block;
+    border-radius: 15rem;
+    background: var(--button-results-color);
+    color: whitesmoke;
+    font-family:var(--font-style);
+    font-size: 0.95rem;
+    border: none;
+    
+}
+
+.continue-button:active{
+    background: var(--card-background-color);
+
+}
+.continue-button:hover{
+    background: var(--card-background-color);
+
+}
+
+.attribution{
+    text-align: center;
+    font-family: var(--font-style);
+    color:hsla(256, 50%, 20%, 0.9);
+    font-weight: 500;
+}
+
+.attribution a{
+    text-decoration: none;
+    color:hsla(256, 50%, 20%, 0.9);
+    animation: font-variation 10s ease-in-out infinite;
+
+}
+
+
+@keyframes font-variation {
+    0%{ 
+        font-variation-settings: 
+    'wght' 300, 'GRAD' 1000 ,'BNCE' 60 , 'wdth' 100;
+    }
+    50%{
+        border: 2px dashed var(--memory-color);
+        background: var(--card-background-color);
+        color: white;
+        border-radius: 10rem;
+        padding: 0.6rem;
+        font-size: 0.9rem;
+        transition: padding 0.3s;
+        font-variation-settings: 
+        'wght' 900, 'GRAD' 1000 ,'BNCE' 60 , 'wdth' 150; 
+    }
+    100%{
+        
+        font-variation-settings: 
+    'wght' 100, 'GRAD' 1000 ,'BNCE' 60 , 'wdth' 100;
+    }
+  
+}
+
+
+@media only screen and (max-width:415px){
+    .card-component-result-summary{
+        width: 100%;
+        height: 44em;
+        margin-top: 0rem;
+        display: grid;
+        grid-template-columns: repeat(1, 100%);   
+    }
+
+    .card-component-result-summary::-webkit-scrollbar{
+        scroll-behavior: smooth;
+    }
+    .card-component-comparing-results{
+        margin-top: 0.8em;
+        margin-bottom: 2em;
+    }
+    h2{
+        display: block;
+        margin-left: 2.5em;
+    }
+    .card-component-results-score{
+        width: 40%;
+        height: 41%;
+    }
+    .card-component-result{
+        border-top-left-radius:0rem ;
+        border-top-right-radius:0rem ;
+    }
+    .continue-button{
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 1.8rem;
+    }
+
+    .attribution{
+        margin: 2em;
+    }
+    .attribution a {
+     animation: none;   
+    }
+    
+    
+}
+
+@media (min-width:415px) and (max-width:600px){
+    .card-component-result-summary{
+        width: 70%;
+        height: 44em;
+        /* margin-top: 0rem; */
+        margin: 0em auto;
+        display: grid;
+        grid-template-columns: repeat(1, 100%);
+        
+    }
+    .card-component-comparing-results{
+        margin-top: 0.8em;
+        margin-bottom: 2em;
+    }
+    h2{
+        margin-left: 2.5em;
+    }
+    .card-component-results-score{
+        width: 40%;
+        height: 41%;
+    }
+    .card-component-result{
+        border-top-left-radius:0rem ;
+        border-top-right-radius:0rem ;
+    }
+    .continue-button{
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 1.8rem;
+    }
+
+    .attribution{
+        margin: 2em;
+    }
+    .attribution a {
+        animation: none;   
+       }
+    
+}
+
