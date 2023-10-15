@@ -261,34 +261,12 @@ h2{
 .attribution a{
     text-decoration: none;
     color:hsla(256, 50%, 20%, 0.9);
-    animation: font-variation 10s ease-in-out infinite;
+    /* animation: font-variation 10s ease-in-out infinite; */
 
 }
 
 
-@keyframes font-variation {
-    0%{ 
-        font-variation-settings: 
-    'wght' 300, 'GRAD' 1000 ,'BNCE' 60 , 'wdth' 100;
-    }
-    50%{
-        border: 2px dashed var(--memory-color);
-        background: var(--card-background-color);
-        color: white;
-        border-radius: 10rem;
-        padding: 0.6rem;
-        font-size: 0.9rem;
-        transition: padding 0.3s;
-        font-variation-settings: 
-        'wght' 900, 'GRAD' 1000 ,'BNCE' 60 , 'wdth' 150; 
-    }
-    100%{
-        
-        font-variation-settings: 
-    'wght' 100, 'GRAD' 1000 ,'BNCE' 60 , 'wdth' 100;
-    }
-  
-}
+
 
 @media only screen and (max-height:400px){
     body{
