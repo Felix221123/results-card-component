@@ -261,6 +261,14 @@ h2{
 .attribution a{
     text-decoration: none;
     color:hsla(256, 50%, 20%, 0.9);
+
+    &:hover , :active{
+        text-decoration:underline ;
+        transition:  all 0.5s;
+        text-decoration-color: var(--button-results-color);
+        color: var(--reaction-color);
+        text-decoration-thickness:0.1rem ;
+    }
     /* animation: font-variation 10s ease-in-out infinite; */
 
 }
